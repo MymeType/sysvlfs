@@ -1,6 +1,6 @@
 # SYSVinit Linux From Scratch
 
-This book aims to be a community-maintained continuation effort of the SysVinit version of the Linux From Scratch book after [the recent announcement on support being dropped for SysVinit in the next version of the book](https://discord.com/channels/282675835964620800/282677788035514370/1467006939975254201).
+This book aims to be a community-maintained continuation effort of the SysVinit version of the Linux From Scratch book after [the recent announcement on support being dropped for SysVinit in the next version of the book](https://discord.com/channels/282675835964620800/282677788035514370/1467006939975254201). **WORK IN PROGRESS!**
 
 ## Motive
 
@@ -57,3 +57,7 @@ Follow the instructions for nochunks and then run:
 ### XML to PDF
 
 `make BASEDIR=/path/to/output/location pdf`
+
+## Support
+
+Contact me (@mymetype) on the [Linux From Scratch Discord server](https://discordservers.com/server/282675835964620800/view) if you have any questions about the book.
