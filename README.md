@@ -18,6 +18,23 @@ On 2026-01-31, the following [announcement](https://discord.com/channels/2826758
 > 
 > We're sorry we're cutting support for init systems other than Systemd, but it's something we must do.
 
+On 2026-02-02, the following email was sent to the LFS mailing lists:
+
+> With some regret, LFS/BLFS will no longer be developing the System V versions
+of the books.
+>
+> There are two reasons for this decision. The first reason is workload. No one working on LFS is paid. We rely completely on volunteers. In LFS there are 88 packages. In BLFS there are over 1000. The volume of changes from upstream is overwhelming the editors.  In this release cycle that started on the 1st of September until now, there have been 70 commits to LFS and 1155 commits to BLFS (and counting). When making package updates, many packages need to be checked for both System V and systemd. When preparing for release, all packages need to be checked for each init system.
+>
+> The second reason for dropping System V is that packages like GNOME and soon KDE's Plasma are building in requirements that require capabilities in systemd that are not in System V. This could potentially be worked around with another init system like OpenRC, but beyond the transition process it still does not address the ongoing workload problem.
+>
+> In the future, the LFS/BLFS 12.4 System V books will continue to be available. For the most part newer versions of packages in those books will be able to be built with the instructions from there, but will not be tested by the LFS editors.
+>
+> The next version of LFS/BLFS will be version 13.0 and is currently has a target release data of March 1st.
+>
+> As a personal note, I do not like this decision. To me LFS is about learning how a system works. Understanding the boot process is a big part of that. systemd is about 1678 "C" files plus many data files.  System V is "22" C files plus about 50 short bash scripts and data files. Yes, systemd provides a lot of capabilities, but we will be losing some things I consider important.
+>
+> However, the decision needs to be made.
+
 As of now, support for building the SysVinit version of the book hasn't been removed from the development branch yet, but when the time comes, this repository will aim to be a soft-fork of the book, pulling in changes from upstream and adapting any needed instructions to work with SysVinit.
 
 ## Building
