@@ -42,10 +42,11 @@ jobs:
           pwd
           echo $default-branch
           make
+          make install
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /home/runner/public_html/lfs-book
+          path: /home/runner/public_html
 
   # Deployment job
   deploy:
