@@ -107,14 +107,6 @@
         procedures of every package in LFS.</para>
       </listitem>
 
-      <listitem revision="systemd">
-        <para>D-Bus</para>
-
-        <para>This package contains programs to implement a message bus system,
-        a simple way for applications to talk to one another.
-        </para>
-      </listitem>
-
       <listitem>
         <para>DejaGNU</para>
 
@@ -223,9 +215,7 @@
         <para>Gperf</para>
 
         <para>This package produces a program that generates a perfect hash
-        function from a set of keys. It is required by
-        <phrase revision='sysv'>Udev</phrase>
-        <phrase revision='systemd'>Systemd</phrase>.</para>
+        function from a set of keys. It is required by Udev.</para>
       </listitem>
 
       <listitem>
@@ -287,11 +277,11 @@
         tools package (net-tools) for its IPv6 capabilities.  </para>
       </listitem>
 
-      <listitem revision="systemd">
+      <listitem>
         <para>Jinja2</para>
 
         <para>This package is a Python module for text templating.
-        It's required to build Systemd.</para>
+        It's required to build Udev from Systemd.</para>
       </listitem>
 
       <listitem>
@@ -396,11 +386,11 @@
         of packages.  It is required by almost every package in LFS.</para>
       </listitem>
 
-      <listitem revision="systemd">
+      <listitem>
         <para>MarkupSafe</para>
 
         <para>This package is a Python module for processing strings in
-        HTML/XHTML/XML safely.  Jinja2 requires this package.</para>
+        HTML/XHTML/XML safely. Jinja2 requires this package.</para>
       </listitem>
 
       <listitem>
@@ -560,7 +550,7 @@
         transactional SQL database engine.</para>
       </listitem>
 
-      <listitem revision="sysv">
+      <listitem>
         <para>Sysklogd</para>
 
         <para>This package supplies programs for logging system messages,
@@ -568,16 +558,7 @@
         events occur.</para>
       </listitem>
 
-      <listitem revision="systemd">
-        <para>Systemd</para>
-
-        <para>This package provides an <application>init</application> program
-        and several additional boot and system control capabilities as an
-        alternative to SysVinit.  It is used by many Linux distributions.
-        </para>
-      </listitem>
-
-      <listitem revision="sysv">
+      <listitem>
         <para>SysVinit</para>
 
         <para>This package provides the <application>init</application>
@@ -585,7 +566,7 @@
         system. </para>
       </listitem>
 
-      <listitem revision="sysv">
+      <listitem>
         <para>Udev</para>
 
         <para>This package is a device manager.  It dynamically controls the

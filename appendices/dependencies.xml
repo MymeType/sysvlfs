@@ -3,8 +3,6 @@
   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../general.ent">
   %general-entities;
-  <!-- Convenient entity for "Systemd" or "Udev" -->
-  <!ENTITY systemd-udev "<phrase revision='systemd'>Systemd</phrase><phrase revision='sysv'>Udev</phrase>">
   <!ENTITY bdb "<ulink url='https://www.oracle.com/database/technologies/related/berkeleydb.html'>Berkeley DB</ulink>">
 ]>
 
@@ -428,7 +426,7 @@
       <segmentedlist id="coreutils-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>Bash, Diffutils, Findutils, Man-DB, and &systemd-udev;</seg>
+          <seg>Bash, Diffutils, Findutils, and Man-DB</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -440,46 +438,6 @@
             and
             <ulink url="https://metacpan.org/pod/IO::Tty">IO::Tty</ulink>
           </seg>
-        </seglistitem>
-      </segmentedlist>
-
-<!-- Begin D-Bus dependency info -->
-
-  <bridgehead renderas="sect2" id="dbus-dep" revision="systemd">D-Bus</bridgehead>
-
-      <segmentedlist id="dbus-depends" revision="systemd">
-        <segtitle>&dependencies;</segtitle>
-        <seglistitem>
-          <seg>Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep,
-          Make, Pkgconf, Sed, Systemd, and Util-linux</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="dbus-rundeps" revision="systemd">
-        <segtitle>&runtime;</segtitle>
-        <seglistitem>
-          <seg>Glibc and Systemd</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="dbus-testdeps" revision="systemd">
-        <segtitle>&testsuites;</segtitle>
-        <seglistitem>
-          <seg>Several packages in BLFS</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="dbus-before" revision="systemd">
-        <segtitle>&before;</segtitle>
-        <seglistitem>
-          <seg>None</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="dbus-optdeps" revision="systemd">
-        <segtitle>&external;</segtitle>
-        <seglistitem>
-          <seg><ulink url="&blfs-book;x/x7lib.html">Xorg Libraries</ulink></seg>
         </seglistitem>
       </segmentedlist>
 
@@ -568,9 +526,7 @@
         <segtitle>&dependencies;</segtitle>
         <seglistitem>
           <seg>Bash, Binutils, Coreutils, Diffutils, Gawk, GCC, Glibc, Grep,
-          Gzip, Make, Pkgconf, Sed,
-          <phrase revision='systemd'>Systemd, </phrase>Texinfo, and
-          Util-linux</seg>
+          Gzip, Make, Pkgconf, Sed, Texinfo, and Util-linux</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -1482,7 +1438,7 @@
       <segmentedlist id="jinja2-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>&systemd-udev;</seg>
+          <seg>None</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -1562,7 +1518,7 @@
       <segmentedlist id="kmod-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>&systemd-udev;</seg>
+          <seg>None</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -1842,7 +1798,7 @@
       <segmentedlist id="libxcrypt-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>Perl, Python, Shadow, and &systemd-udev;</seg>
+          <seg>Perl, Python, and Shadow</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -1964,7 +1920,7 @@
       <segmentedlist id="lz4-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>Zstd <phrase revision="systemd">and Systemd</phrase></seg>
+          <seg>Zstd</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -2065,7 +2021,7 @@
         <seglistitem>
           <seg>Bash, Binutils, Bzip2, Coreutils, Flex, GCC, GDBM, Gettext,
           Glibc, Grep, Groff, Gzip, Less, Libpipeline, Make, Pkgconf, Sed,
-          <phrase revision='systemd'>Systemd, </phrase>and Xz</seg>
+          and Xz</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -2203,7 +2159,7 @@
       <segmentedlist id="meson-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>&systemd-udev;</seg>
+          <seg>None</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -2402,7 +2358,7 @@
       <segmentedlist id="openssl-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>Coreutils, Kmod, Linux, and &systemd-udev;</seg>
+          <seg>Coreutils, Kmod, and Linux</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -2605,10 +2561,7 @@
       <segmentedlist id="pkgconf-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>Binutils,
-          <phrase revision='systemd'>D-Bus, </phrase>
-          E2fsprogs, IProute2, Kmod, Man-DB, Procps-ng, Python,
-          &systemd-udev;, 
+          <seg>Binutils, E2fsprogs, IProute2, Kmod, Man-DB, Procps-ng, Python,
           and Util-linux</seg>
         </seglistitem>
       </segmentedlist>
@@ -2627,8 +2580,7 @@
         <segtitle>&dependencies;</segtitle>
         <seglistitem>
           <seg>Bash, Binutils, Coreutils, GCC, Glibc, Make, Ncurses,
-          <phrase revision='sysv'>and </phrase>Pkgconf<phrase
-          revision='systemd'>, and Systemd</phrase></seg>
+          and Pkgconf</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -2657,10 +2609,7 @@
         <segtitle>&external;</segtitle>
         <seglistitem>
           <seg>
-            <phrase revision='systemd'>None</phrase>
-            <phrase revision='sysv'>
-              <ulink url='&blfs-book;general/elogind.html'>elogind</ulink>
-            </phrase>
+            <ulink url='&blfs-book;general/elogind.html'>elogind</ulink>
           </seg>
         </seglistitem>
       </segmentedlist>
@@ -2951,175 +2900,75 @@
       </segmentedlist>
 
 <!-- Begin Sysklogd dependency info -->
-  <bridgehead renderas="sect2" id="sysklogd-dep" revision="sysv">Sysklogd</bridgehead>
+  <bridgehead renderas="sect2" id="sysklogd-dep">Sysklogd</bridgehead>
 
-      <segmentedlist id="sysklogd-depends" revision="sysv">
+      <segmentedlist id="sysklogd-depends">
         <segtitle>&dependencies;</segtitle>
         <seglistitem>
           <seg>Binutils, Coreutils, GCC, Glibc, Make, and Patch</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysklogd-rundeps" revision="sysv">
+      <segmentedlist id="sysklogd-rundeps">
         <segtitle>&runtime;</segtitle>
         <seglistitem>
           <seg>Glibc</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysklogd-testdeps" revision="sysv">
+      <segmentedlist id="sysklogd-testdeps">
         <segtitle>&testsuites;</segtitle>
         <seglistitem>
           <seg>No test suite available</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysklogd-before" revision="sysv">
+      <segmentedlist id="sysklogd-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
           <seg>None</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysklogd-optdeps" revision="sysv">
+      <segmentedlist id="sysklogd-optdeps">
         <segtitle>&external;</segtitle>
         <seglistitem>
           <seg>None</seg>
-        </seglistitem>
-      </segmentedlist>
-
-<!-- Begin systemd dependency info -->
-  <bridgehead renderas="sect2" id="systemd-dep" revision='systemd'>Systemd</bridgehead>
-
-      <segmentedlist id="systemd-depends" revision='systemd'>
-        <segtitle>&dependencies;</segtitle>
-        <seglistitem>
-         <seg>Acl, Bash, Binutils, Coreutils, Diffutils, Gawk,
-         GCC, Glibc, Gperf, Grep, Jinja2, Libxcrypt, Lz4, Meson,
-         OpenSSL, Pcre2, Pkgconf, Sed, Util-linux, and Zstd</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="systemd-rundeps" revision='systemd'>
-        <segtitle>&runtime;</segtitle>
-        <seglistitem>
-          <seg>Acl, Glibc, Libxcrypt, OpenSSL, Util-linux, Xz,
-          Zlib, and Zstd</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="systemd-testdeps" revision='systemd'>
-        <segtitle>&testsuites;</segtitle>
-        <seglistitem>
-          <seg>None</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="systemd-before" revision='systemd'>
-        <segtitle>&before;</segtitle>
-        <seglistitem>
-          <seg>D-Bus, E2fsprogs, Man-DB, Procps-ng, and Util-linux</seg>
-        </seglistitem>
-      </segmentedlist>
-
-      <segmentedlist id="systemd-optdeps" revision='systemd'>
-        <segtitle>&external;</segtitle>
-        <seglistitem>
-          <seg>
-            <ulink url="https://www.apparmor.net/">AppArmor</ulink>,
-            <ulink url="&github;/linux-audit/audit-userspace">
-              audit-userspace</ulink>,
-            <ulink url="&github;/scop/bash-completion">
-              bash-completion</ulink>,
-            <ulink
-              url="&blfs-book;postlfs/btrfs-progs.html">btrfs-progs</ulink>,
-            <ulink url="&blfs-book;basicnet/curl.html">cURL</ulink>,
-            <ulink url="&blfs-book;postlfs/cryptsetup.html">cryptsetup</ulink>,
-            <ulink url="&blfs-book;pst/docbook.html">docbook-xml</ulink>,
-            <ulink
-              url="&blfs-book;pst/docbook-xsl.html">docbook-xsl-nons</ulink>,
-            <ulink url="&blfs-book;general/git.html">Git</ulink>,
-            <ulink url="&blfs-book;postlfs/gnutls.html">GnuTLS</ulink>,
-            <ulink url="&blfs-book;postlfs/iptables.html">iptables</ulink>,
-            <ulink url='https://jekyllrb.com/'>jekyll</ulink>,
-            <ulink url="https://www.kernel.org/pub/linux/utils/kernel/kexec/">
-              kexec-tools</ulink>,
-            <ulink url='&github;/libbpf/libbpf'>libbpf</ulink>,
-            <ulink url="https://sourceware.org/elfutils/">libdw</ulink>,
-            <ulink
-              url="https://developers.yubico.com/libfido2/">libfido2</ulink>,
-            <ulink url="&blfs-book;general/libgcrypt.html">libgcrypt</ulink>,
-            <ulink url="&blfs-book;general/libidn2.html">libidn2</ulink>,
-            <ulink url="https://www.gnu.org/software/libmicrohttpd/">
-              libmicrohttpd</ulink>,
-            <ulink
-              url="&blfs-book;postlfs/libpwquality.html">libpwquality</ulink>,
-            <ulink url="&blfs-book;general/libseccomp.html">libseccomp</ulink>,
-            <ulink
-              url="&blfs-book;general/libxkbcommon.html">libxkbcommon</ulink>,
-            <ulink url="&blfs-book;general/libxslt.html">libxslt</ulink>,
-            <ulink url="&blfs-book;postlfs/linux-pam.html">Linux-PAM</ulink>,
-            <ulink
-              url="&blfs-book;general/python-modules.html#lxml">lxml</ulink>,
-            <ulink url="&blfs-book;postlfs/make-ca.html">make-ca</ulink>,
-            <ulink url="&blfs-book;postlfs/p11-kit.html">p11-kit</ulink>,
-            <ulink url="&pypi-home;pefile">pefile</ulink>,
-            <ulink url="&blfs-book;postlfs/polkit.html">Polkit</ulink>,
-            <ulink url='&pypi-home;/pyelftools'>pyelftools</ulink>,
-            <ulink url="&blfs-book;postlfs/qemu.html">qemu</ulink>,
-            <ulink url="&blfs-book;general/qrencode.html">qrencode</ulink>,
-            <ulink url="https://sourceforge.net/projects/linuxquota/"
-              >quota-tools</ulink>,
-            <ulink url="https://rpm.org">rpm</ulink>,
-            <ulink url="&blfs-book;basicnet/rsync.html">rsync</ulink>,
-            <ulink url="&github;/SELinuxProject/selinux">
-              SELinux</ulink>,
-            <ulink url="&blfs-book;general/python-modules.html#sphinx">
-              Sphinx</ulink>,
-            <ulink url="https://sourceware.org/systemtap/">
-              systemtap</ulink>,
-            <ulink url="https://tpm2-tss.readthedocs.io/en/latest/">
-              tpm2-tss</ulink>,
-            <ulink url="&blfs-book;general/valgrind.html">Valgrind</ulink>,
-            <ulink url="https://xenproject.org">Xen</ulink>,
-            and
-            <ulink url="&blfs-book;postlfs/zsh.html">zsh</ulink>
-          </seg>
         </seglistitem>
       </segmentedlist>
 
 <!-- Begin SysVinit dependency info -->
-  <bridgehead renderas="sect2" id="sysvinit-dep" revision='sysv'>SysVinit</bridgehead>
+  <bridgehead renderas="sect2" id="sysvinit-dep">SysVinit</bridgehead>
 
-      <segmentedlist id="sysvinit-depends" revision='sysv'>
+      <segmentedlist id="sysvinit-depends">
         <segtitle>&dependencies;</segtitle>
         <seglistitem>
           <seg>Binutils, Coreutils, GCC, Glibc, Make, and Sed</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysvinit-rundeps" revision='sysv'>
+      <segmentedlist id="sysvinit-rundeps">
         <segtitle>&runtime;</segtitle>
         <seglistitem>
           <seg>Glibc</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysvinit-testdeps" revision='sysv'>
+      <segmentedlist id="sysvinit-testdeps">
         <segtitle>&testsuites;</segtitle>
         <seglistitem>
           <seg>No test suite available</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysvinit-before" revision='sysv'>
+      <segmentedlist id="sysvinit-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
           <seg>None</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="sysvinit-optdeps" revision='sysv'>
+      <segmentedlist id="sysvinit-optdeps">
         <segtitle>&external;</segtitle>
         <seglistitem>
           <seg>None</seg>
@@ -3245,9 +3094,9 @@
       </segmentedlist>
 
 <!-- Begin Udev dependency info -->
-  <bridgehead renderas="sect2" id="udev-dep" revision="sysv">Udev</bridgehead>
+  <bridgehead renderas="sect2" id="udev-dep">Udev</bridgehead>
 
-      <segmentedlist id="udev-depends" revision="sysv">
+      <segmentedlist id="udev-depends">
         <segtitle>&dependencies;</segtitle>
         <seglistitem>
          <seg>Acl, Bash, Binutils, Coreutils, Diffutils, Gawk,
@@ -3256,28 +3105,28 @@
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="udev-rundeps" revision="sysv">
+      <segmentedlist id="udev-rundeps">
         <segtitle>&runtime;</segtitle>
         <seglistitem>
           <seg>Acl, Glibc, Libcap, OpenSSL, and Util-linux</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="udev-testdeps" revision="sysv">
+      <segmentedlist id="udev-testdeps">
         <segtitle>&testsuites;</segtitle>
         <seglistitem>
           <seg>None</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="udev-before" revision="sysv">
+      <segmentedlist id="udev-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
           <seg>Util-linux</seg>
         </seglistitem>
       </segmentedlist>
 
-      <segmentedlist id="udev-optdeps" revision="sysv">
+      <segmentedlist id="udev-optdeps">
         <segtitle>&external;</segtitle>
         <seglistitem>
           <seg>None</seg>
@@ -3291,15 +3140,14 @@
         <segtitle>&dependencies;</segtitle>
         <seglistitem>
           <seg>Bash, Binutils, Coreutils, Diffutils, File, Findutils, Gawk,
-          GCC, Gettext, Glibc, Grep, Make, Ncurses, Pkgconf, Sed,
-          &systemd-udev;, and Zlib</seg>
+          GCC, Gettext, Glibc, Grep, Make, Ncurses, Pkgconf, Sed, and Zlib</seg>
         </seglistitem>
       </segmentedlist>
 
       <segmentedlist id="util-linux-rundeps">
         <segtitle>&runtime;</segtitle>
         <seglistitem>
-          <seg>Glibc, Ncurses, Readline, &systemd-udev;, and Zlib</seg>
+          <seg>Glibc, Ncurses, Readline, and Zlib</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -3491,7 +3339,7 @@
       <segmentedlist id="xz-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>File, GRUB, Kmod, Libelf, Man-DB, and &systemd-udev;</seg>
+          <seg>File, GRUB, Kmod, Libelf, and Man-DB</seg>
         </seglistitem>
       </segmentedlist>
 
@@ -3567,8 +3415,7 @@
       <segmentedlist id="zstd-before">
         <segtitle>&before;</segtitle>
         <seglistitem>
-          <seg>Binutils, File, GCC, Kmod, Libelf, Python,
-          and &systemd-udev;</seg>
+          <seg>Binutils, File, GCC, Kmod, Libelf, and Python</seg>
         </seglistitem>
       </segmentedlist>
 

@@ -42,18 +42,11 @@
 
     <para>Prepare Procps-ng for compilation:</para>
 
-<screen revision="sysv"><userinput remap="configure">./configure --prefix=/usr                           \
+<screen><userinput remap="configure">./configure --prefix=/usr                           \
             --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \
             --disable-static                        \
             --disable-kill                          \
             --enable-watch8bit</userinput></screen>
-
-<screen revision="systemd"><userinput remap="configure">./configure --prefix=/usr                           \
-            --docdir=/usr/share/doc/procps-ng-&procps-ng-version; \
-            --disable-static                        \
-            --disable-kill                          \
-            --enable-watch8bit                      \
-            --with-systemd</userinput></screen>
 
     <variablelist>
       <title>The meaning of the configure option:</title>

@@ -167,11 +167,6 @@
         href="kernel/nvme.xml"/>
     </note>
 
-    <note revision="systemd">
-      <para>While "The IPv6 Protocol" is not strictly
-      required, it is highly recommended by the systemd developers.</para>
-    </note>
-
     <para>There are several other options that may be desired
     depending on the requirements for the system. For a list of options needed
     for BLFS packages, see the <ulink

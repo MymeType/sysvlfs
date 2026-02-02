@@ -131,31 +131,28 @@
       you have to downgrade a package, or if the authors change the versioning
       scheme for library files.</para> </listitem>
 
-      <listitem><para>If a package containing a shared library is updated,
+    <listitem><para>
+      If a package containing a shared library is updated,
       and the name of the library doesn't change, but a severe issue
       (especially, a security vulnerability) is fixed, all running programs
       linked to the shared library should be restarted.  The following
       command, run as <systemitem class="username">root</systemitem> after
       the update is complete, will list which processes are using the old versions of those libraries
       (replace <replaceable>libfoo</replaceable> with the name of the
-      library):</para>
+      library):
+      </para>
 
 <screen role="nodump"><userinput>grep -l '<replaceable>libfoo</replaceable>.*deleted' /proc/*/maps | tr -cd 0-9\\n | xargs -r ps u</userinput></screen>
+      </listitem>
 
-      <para>
+      <listitem><para>
         If <application>OpenSSH</application> is being used to access
         the system and it is linked to the updated library, you must
         restart the <command>sshd</command> service, then logout, login again,
         and run the preceding command again to confirm that nothing is still using the
         deleted libraries.
-      </para>
-
-      <para revision='systemd'>
-        If the <command>systemd</command> daemon (running as PID 1) is
-        linked to the updated library, you can restart it without rebooting
-        by running <command>systemctl daemon-reexec</command> as the
-        <systemitem class='username'>root</systemitem> user.
       </para></listitem>
+
 
       <listitem>
         <para>If an executable program or a shared library is overwritten, the processes
@@ -368,17 +365,11 @@ make DESTDIR=/usr/pkg/libfoo/1.1 install</userinput></screen>
     <filename>/etc/fstab</filename>,
     <filename>/etc/passwd</filename>,
     <filename>/etc/group</filename>,
-    <phrase revision="systemd">
-      <filename>/etc/shadow</filename>, and
-      <filename>/etc/ld.so.conf</filename>.
-    </phrase>
-    <phrase revision="sysv">
-      <filename>/etc/shadow</filename>,
-      <filename>/etc/ld.so.conf</filename>,
-      <filename>/etc/sysconfig/rc.site</filename>,
-      <filename>/etc/sysconfig/network</filename>, and
-      <filename>/etc/sysconfig/ifconfig.eth0</filename>.
-    </phrase>
+    <filename>/etc/shadow</filename>,
+    <filename>/etc/ld.so.conf</filename>,
+    <filename>/etc/sysconfig/rc.site</filename>,
+    <filename>/etc/sysconfig/network</filename>, and
+    <filename>/etc/sysconfig/ifconfig.eth0</filename>.
     </para>
 
     <para>A custom kernel may be needed for the new system, depending on

@@ -6,7 +6,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-config-usage" revision="sysv">
+<sect1 id="ch-config-usage">
   <?dbhtml filename="usage.html"?>
 
   <title>System V Bootscript Usage and Configuration</title>

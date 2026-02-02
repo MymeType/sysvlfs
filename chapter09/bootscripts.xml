@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-config-bootscripts" role="wrap" revision="sysv">
+<sect1 id="ch-config-bootscripts" role="wrap">
   <?dbhtml filename="bootscripts.html"?>
 
   <sect1info condition="script">

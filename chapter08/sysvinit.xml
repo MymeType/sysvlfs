@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-system-sysvinit" role="wrap" revision="sysv">
+<sect1 id="ch-system-sysvinit" role="wrap">
   <?dbhtml filename="sysvinit.html"?>
 
   <sect1info condition="script">

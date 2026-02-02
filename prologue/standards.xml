@@ -65,8 +65,7 @@
           <para>
             Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk,
             GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, Psmisc,
-            Sed, Shadow, <phrase revision='sysv'>SysVinit</phrase><phrase
-            revision='systemd'>Systemd</phrase>, Tar, Util-linux, Zlib
+            Sed, Shadow, SysVinit, Tar, Util-linux, Zlib
           </para>
         </listitem>
       </varlistentry>

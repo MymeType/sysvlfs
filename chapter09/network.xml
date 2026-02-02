@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<sect1 id="ch-config-network" revision="sysv">
+<sect1 id="ch-config-network">
   <?dbhtml filename="network.html"?>
 
   <title>General Network Configuration</title>

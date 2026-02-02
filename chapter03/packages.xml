@@ -120,15 +120,6 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry revision="systemd">
-      <term>D-Bus (&dbus-version;) - <token>&dbus-size;</token>:</term>
-      <listitem>
-        <para>Home page: <ulink url="&dbus-home;"/></para>
-        <para>Download: <ulink url="&dbus-url;"/></para>
-        <para>MD5 sum: <literal>&dbus-md5;</literal></para>
-      </listitem>
-    </varlistentry>
-
     <varlistentry>
       <term>DejaGNU (&dejagnu-version;) - <token>&dejagnu-size;</token>:</term>
       <listitem>
@@ -404,7 +395,7 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry revision="sysv">
+    <varlistentry>
       <term>LFS-Bootscripts (&lfs-bootscripts-version;) - <token>&lfs-bootscripts-size;</token>:</term>
       <listitem>
         <para>Home page: <ulink url="&lfs-bootscripts-home;"/></para>
@@ -757,7 +748,7 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry revision="sysv">
+    <varlistentry>
       <term>Sysklogd (&sysklogd-version;) - <token>&sysklogd-size;</token>:</term>
       <listitem>
         <para>Home page: <ulink url="&sysklogd-home;"/></para>
@@ -791,7 +782,7 @@
     </varlistentry>
 
 
-    <varlistentry revision="sysv">
+    <varlistentry>
       <term>SysVinit (&sysvinit-version;) - <token>&sysvinit-size;</token>:</term>
       <listitem>
         <para>Home page: <ulink url="&sysvinit-home;"/></para>
@@ -844,7 +835,7 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry revision="sysv">
+    <varlistentry>
       <term>Udev-lfs Tarball (&udev-lfs-version;) - <token>&udev-lfs-size;</token>:</term>
       <listitem>
         <para>Download: <ulink url="&udev-lfs-url;"/></para>
