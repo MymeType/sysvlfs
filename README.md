@@ -61,3 +61,9 @@ Follow the instructions for nochunks and then run:
 ## Support
 
 Contact me (@mymetype) on the [Linux From Scratch Discord server](https://discordservers.com/server/282675835964620800/view) if you have any questions about the book.
+
+## Licensing
+
+The text in this book is licensed under [CC BY-NC-SA 2.0](LICENSE.CC).
+
+Code snippets in this book are licensed under the [MIT license](LICENSE).
