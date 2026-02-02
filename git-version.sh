@@ -1,35 +1,21 @@
 #!/bin/bash
 
-if [ "$1" = sysv ]; then
-    SYSV="INCLUDE"
-    SYSTEMD="IGNORE "
-elif [ "$1" = systemd ]; then
-    SYSV="IGNORE "
-    SYSTEMD="INCLUDE"
-else
-    echo You must provide either \"sysv\" or \"systemd\" as argument
-    exit 1
-fi
-
-echo "<!ENTITY % sysv    \"$SYSV\">"     >  conditional.ent
-echo "<!ENTITY % systemd \"$SYSTEMD\">"  >> conditional.ent
-
 if [ -e LFS-RELEASE ]; then
-	exit 0
+    exit 0
 fi
 
 if ! git status > /dev/null; then
-    # Either it's not a git repository or git is unavailable.
-    # Just workaround.
-    echo "<![ %sysv; ["                                    >  version.ent
-    echo "<!ENTITY version           \"unknown\">"         >> version.ent
-    echo "]]>"                                             >> version.ent
-    echo "<![ %systemd; ["                                 >> version.ent
-    echo "<!ENTITY version           \"unknown-systemd\">" >> version.ent
-    echo "]]>"                                             >> version.ent
-    echo "<!ENTITY releasedate       \"unknown\">"         >> version.ent
-    echo "<!ENTITY copyrightdate     \"1999-2023\">"       >> version.ent
-    exit 0
+
+# Either it's not a git repository or git is unavailable.
+# Just workaround.
+cat >> version.ent << 'EOF'
+<!ENTITY version           "unknown">
+<!ENTITY releasedate       "unknown">
+<!ENTITY copyrightdate     "1999-2026">
+EOF
+
+exit 0
+
 fi
 
 export LC_ALL=en_US.utf8
@@ -54,20 +40,15 @@ full_date="$month $day$suffix, $year"
 sha="$(git describe --abbrev=1 --always)"
 rev=$(echo "$sha" | sed 's/-g[^-]*$//')
 version="$rev"
-versiond="$rev-systemd"
 
 if [ "$(git diff HEAD | wc -l)" != "0" ]; then
     version="$version-wip"
-    versiond="$versiond-wip"
 fi
 
-echo "<![ %sysv; ["                                        >  version.ent
-echo "<!ENTITY version           \"$version\">"            >> version.ent
-echo "]]>"                                                 >> version.ent
-echo "<![ %systemd; ["                                     >> version.ent
-echo "<!ENTITY version          \"$versiond\">"            >> version.ent
-echo "]]>"                                                 >> version.ent
-echo "<!ENTITY releasedate       \"$full_date\">"          >> version.ent
-echo "<!ENTITY copyrightdate     \"1999-$year\">"          >> version.ent
+cat >> version.ent << EOF
+<!ENTITY version           "$version">
+<!ENTITY releasedate       "$full_date">
+<!ENTITY copyrightdate     "1999-$year">
+EOF
 
 [ -z "$DIST" ] || echo $version > "$DIST"
