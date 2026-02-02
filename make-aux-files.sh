@@ -1,22 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This gets run before the aux-files-data target
 
-rm -f lfs-bootscripts*.tar.?z*
+set -eu
 
-# Get base file name and move bootscripts directory to that name
-version=`grep "ENTITY lfs-bootscripts-version" packages.ent | head -n1| cut -d'"' -f2`
-mv bootscripts lfs-bootscripts-$version
+pushd "$RENDERTMP" > /dev/null
 
-# Create the tarball and clean up
-tar -cJf lfs-bootscripts-$version.tar.xz --exclude .svn lfs-bootscripts-$version
-mv lfs-bootscripts-$version bootscripts
+# Get base file name and copy bootscripts directory to that name
+version="$(grep "^<!ENTITY lfs-bootscripts-version " packages.ent | cut -d\" -f2)"
+bootscripts="lfs-bootscripts-$version"
+mv -f bootscripts "$bootscripts"
 
-#rm -f udev-config*.bz2
+# Create the tarball
+bootscripts_tarball="$bootscripts.tar.xz"
+tar -cJf "$bootscripts_tarball" "$bootscripts"
 
-# Get file name and move udev config directory to that name
-#version=`grep "ENTITY udev-config " packages.ent |cut -d'"' -f2`
-#mv udev-config $version
+# Bootscripts data
+cat >> bootscripts-data << EOF
+bootscripts_tarball="$bootscripts.tar.xz"
+bootinstallsize="$(du -sk "$bootscripts" | cut -f1)"
+bootsize="$(du -sbk "$bootscripts_tarball" | cut -f1)"
+bootmd5="$(md5sum "$bootscripts_tarball" | cut -d\  -f1)"
+EOF
 
-# Create the tarball and clean up
-#tar -cjf $version.tar.bz2 --exclude .svn $version
-#mv $version udev-config
-
+popd > /dev/null
