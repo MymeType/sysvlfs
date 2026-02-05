@@ -39,7 +39,7 @@ As of now, support for building the SysVinit version of the book hasn't been rem
 
 ## Building
 
-Install the needed packages as detailed in [INSTALL](INSTALL), then run the following commands:
+Install the needed packages as detailed in [INSTALL.md](INSTALL.md), then run the following commands:
 
 ```bash
 make
