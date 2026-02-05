@@ -52,6 +52,6 @@ Contact me (@mymetype) on the [Linux From Scratch Discord server](https://discor
 
 ## Licensing
 
-The text in this book is licensed under [CC BY-NC-SA 2.0](LICENSE.CC).
+The text in this book is licensed under [CC BY-NC-SA 2.0](LICENSE.TEXT).
 
 Code snippets in this book are licensed under the [MIT license](LICENSE).
