@@ -38,11 +38,15 @@
     <year>&copyrightdate;</year>
     <holder>Gerard Beekmans</holder>
   </copyright>
+  <copyright>
+    <year>2026</year>
+    <holder>MymeType</holder>
+  </copyright>
 
   <legalnotice>
 
     <para>Copyright &copy; &copyrightdate;, Gerard Beekmans</para>
-    <para>Copyright &copy; 2026, Gerard Beekmans</para>
+    <para>Copyright &copy; 2026, MymeType</para>
 
     <para>All rights reserved.</para>
 
