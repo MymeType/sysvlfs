@@ -39,8 +39,8 @@
 
 <![ %release; [
 <![ %sysv; [
-<!ENTITY version         "%relnum;">
-<!ENTITY short-version   "%relnum;">  <!-- Used below in &blfs-book; -->
+<!ENTITY version         "%relnum;-sysv">
+<!ENTITY short-version   "%relnum;-sysv">  <!-- Used below in &blfs-book; -->
 ]]>
 <![ %systemd; [
 <!ENTITY version         "%relnum;-systemd">
@@ -58,7 +58,7 @@
 
 <![ %rc; [
 <![ %sysv; [
-<!ENTITY version         "%relnum;-rc%rcnum;">
+<!ENTITY version         "%relnum;-sysv-rc%rcnum;">
 <!ENTITY short-version   "svn">  <!-- Used below in &blfs-book; -->
 ]]>
 <![ %systemd; [
