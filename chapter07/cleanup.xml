@@ -161,7 +161,7 @@ tar -cJpf $HOME/lfs-temp-tools-&version;.tar.xz .</userinput></screen>
 
 <screen role="nodump"><literal>cd $LFS
 rm -rf ./*
-tar -xpf $HOME/lfs-temp-tools-&version;.tar.xz</literal></screen>
+tar -xpf $HOME/lfs-temp-tools-&version;-sysv.tar.xz</literal></screen>
 
     <para>
        Again, double check that the environment has been set up properly

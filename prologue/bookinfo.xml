@@ -6,8 +6,8 @@
 ]>
 
 <bookinfo>
-  <title>SysVinit Linux From Scratch</title>
-  <subtitle>Version &version;</subtitle>
+  <title>Linux From Scratch</title>
+  <subtitle>Version &version;-sysv</subtitle>
   <subtitle>Published &releasedate;</subtitle>
 
   <authorgroup>
