@@ -116,6 +116,7 @@
     current book.
   </para></note>
 -->
+<!--
   <para>Additionally, starting with LFS-7.0, there is a separate file,
   <ulink url="../md5sums">md5sums</ulink>, which can be used to verify that all
   the correct packages are available before proceeding.  Place that file in
@@ -127,7 +128,7 @@ popd</userinput></screen>
 
   <para>This check can be used after retrieving the needed files with any of the
   methods listed above.</para>
-
+-->
   <para>If the packages and patches are downloaded as a non-&root; user,
   these files will be owned by the user.  The file system records the
   owner by its UID, and the UID of a normal user in the host distro is
