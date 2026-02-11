@@ -76,7 +76,7 @@
 ]]>
 
 <![ %sysv; [
-<!ENTITY wget-list       "wget-list-sysv">
+<!ENTITY wget-list       "wget-list">
 ]]>
 <![ %systemd; [
 <!ENTITY wget-list       "wget-list-systemd">
