@@ -41,8 +41,7 @@ jobs:
         run: |
           pwd
           echo $default-branch
-          make
-          make install
+          make REV=sysv
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
