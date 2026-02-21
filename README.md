@@ -35,7 +35,7 @@ of the books.
 >
 > However, the decision needs to be made.
 
-As of now, support for building the SysVinit version of the book hasn't been removed from the development branch yet, but when the time comes, this repository will aim to be a soft-fork of the book, pulling in changes from upstream and adapting any needed instructions to work with SysVinit.
+This repository aims to be a soft-fork of the book, pulling in changes from upstream and adapting any needed instructions to work with SysVinit.
 
 ## Building
 
@@ -48,7 +48,7 @@ make install INSTALLDIR=/path/to/output/location
 
 ## Support
 
-Contact me (@mymetype) on the [Linux From Scratch Discord server](https://discordservers.com/server/282675835964620800/view) if you have any questions about the book.
+Contact me via  if you have any questions about the book.
 
 ## Licensing
 
