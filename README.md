@@ -47,7 +47,7 @@ make REV=sysv BASEDIR=/path/to/output/location
 
 ## Support
 
-Contact me via  if you have any questions about the book.
+Contact me on Fluxer (`MymeType#8121`) or on any other messaging platform I'm in (see my GitHub profile) if you have any questions about the book.
 
 ## Licensing
 
