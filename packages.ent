@@ -768,9 +768,9 @@
 <!ENTITY util-linux-fin-du "346 MB">
 <!ENTITY util-linux-fin-sbu "0.5 SBU">
 
-<!ENTITY vim-version "9.2.0000">
+<!ENTITY vim-version "9.2.0078">
 <!ENTITY vim-docdir "vim/vim92">
-<!ENTITY vim-size "19,121 KB">
+<!ENTITY vim-size "19,292 KB">
 <!ENTITY vim-url "https://github.com/vim/vim/archive/v&vim-version;/vim-&vim-version;.tar.gz">
 <!-- N.B. LFS 9.0 uses
      https://github.com/vim/vim/archive/v8.1.1846/vim-8.1.1846.tar.gz
@@ -783,7 +783,7 @@
      release.  The "Next" button just sets "after=" in the URL.  For
      example, https://github.com/vim/vim/tags?after=v8.1.1847 will show
      us v8.1.1846. -->
-<!ENTITY vim-md5 "db7dc7f98212e7d09ee8ad1e37d9998a">
+<!ENTITY vim-md5 "592819d17a5f76d39ddba5651912afe0">
 <!ENTITY vim-home "https://www.vim.org">
 <!ENTITY vim-fin-du "217 MB">
 <!ENTITY vim-fin-sbu "3.2 SBU">
@@ -814,14 +814,14 @@
 <!ENTITY xz-fin-du "24 MB">
 <!ENTITY xz-fin-sbu "0.1 SBU">
 
-<!ENTITY zlib-version "1.3.1">
-<!ENTITY zlib-size "1,478 KB">
+<!ENTITY zlib-version "1.3.2">
+<!ENTITY zlib-size "1,468 KB">
 <!-- DO NOT remove "fossils"!
      The upstream removes https://zlib.net/zlib-&zlib-version;.tar.xz
      once a newer version is released EVEN IF there is no security fixes.
      Unfortunately there is no .xz files in fossils directory.  -->
 <!ENTITY zlib-url "https://zlib.net/fossils/zlib-&zlib-version;.tar.gz">
-<!ENTITY zlib-md5 "9855b6d802d7fe5b7bd5b196a2271655">
+<!ENTITY zlib-md5 "a1e6c958597af3c67d162995a342138a">
 <!ENTITY zlib-home "https://zlib.net/">
 <!ENTITY zlib-fin-du "6.4 MB">
 <!ENTITY zlib-fin-sbu "less than 0.1 SBU">
