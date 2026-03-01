@@ -42,8 +42,7 @@ This repository aims to be a soft-fork of the book, pulling in changes from upst
 Install the needed packages as detailed in [INSTALL.md](INSTALL.md), then run the following commands:
 
 ```bash
-make
-make install INSTALLDIR=/path/to/output/location
+make REV=sysv BASEDIR=/path/to/output/location
 ```
 
 ## Support
