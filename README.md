@@ -43,7 +43,7 @@ SYSVLFS will **NEVER** require you to verify your age to access any functionalit
 
 Because of this, residents of any countries, states or territories that require age verification for operating systems, are not authorized to use this distro. This list currently includes Brazil, effective March 17, 2026, California, effective January 1, 2027, and will include Colorado, Illinois and New York provided they pass their currently 
 proposed legislation. I urge users to write their representatives to get
-these laws repealed or replaced and for developers to refuse implementing any sort of system to comply with said rules in their software. *Compliance is acceptance.*
+these laws repealed or replaced and for developers to refuse implementing any sort of system to comply with said laws in their software. *Compliance is acceptance.*
 
 ## Building
 
