@@ -41,6 +41,15 @@
     -->
 
     <listitem>
+      <para>2026-03-29</para>
+      <itemizedlist>
+        <listitem>
+          <para>[MymeType] - Update to sysvinit-3.18.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    
+    <listitem>
       <para>2026-03-15</para>
       <itemizedlist>
         <listitem>
