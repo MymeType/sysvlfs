@@ -105,21 +105,50 @@
     system.</para> </sect3>
 
     <sect3>
-    <title>The Grub Bios Partition</title>
+    <title>The Grub BIOS Partition</title>
 
     <para>If the <emphasis>boot disk</emphasis> has been partitioned with a
     GUID Partition Table (GPT), then a small, typically 1 MB, partition must be
-    created if it does not already exist.  This partition is not formatted, but
-    must be available for GRUB to use during installation of the boot
-    loader. This partition will normally be labeled 'BIOS Boot' if using
-    <command>fdisk</command> or have a code of <emphasis>EF02</emphasis> if
-    using the <command>gdisk</command> command.</para>
+    created if the system is being booted with BIOS and it does not already
+    exist.  This partition is not formatted, but must be available for GRUB to
+    use during installation of the boot loader.  This partition will normally
+    be labeled 'BIOS Boot' if using <command>fdisk</command> or have a code of
+    <emphasis>EF02</emphasis> if using the <command>gdisk</command>
+    command.</para>
 
-    <note><para>The Grub Bios partition must be on the drive that the BIOS
+    <para>If the boot disk is partitioned with an MBR Partition Table, or DOS
+    disklabel, then this partition is not needed as space already exists before
+    the first partition that Grub can use.</para>
+
+    <note><para>The Grub BIOS partition must be on the drive that the BIOS
     uses to boot the system.  This is not necessarily the drive that holds
     the LFS root partition. The disks on a system may use different
-    partition table types. The necessity of the Grub Bios partition depends
+    partition table types. The necessity of the Grub BIOS partition depends
     only on the partition table type of the boot disk.</para></note>
+    </sect3>
+
+    <sect3>
+    <title>The EFI System Partition</title>
+
+    <para>This partition, also known as the <emphasis>ESP</emphasis>, is needed
+    when booting the system with UEFI.  It stores the EFI application that is
+    ran during bootup. The boot drive can be partitioned with MBR Partition
+    Table, or DOS, but compatibility issues will tend to arise as a result.
+    Therefore, it is always a good idea in this case to partition the boot
+    drive with a GUID Partition Table (GPT). If you're only booting LFS from
+    the partition, 20 MB or lower can suffice. The partition should be bigger
+    than the EFI image size because GRUB dumps a lot of data to the partition
+    before creating the EFI image. To be safe, 128 MB to 256 MB is recommended
+    but can be dropped much lower with some experimentation. The partition
+    label should be 'EFI System' if using <command>fdisk</command>.</para>
+
+    <para>For Grub, the EFI System Partition should be located at
+    <filename class="directory">/boot/efi</filename>.</para>
+
+    <para>A lot of UEFI systems have a Compatibility Support Mode (CSM) or
+    Legacy Boot option, allowing to boot with BIOS. It could be a good idea to
+    create a Grub BIOS partition if your system supports CSM in case UEFI
+    booting does not work as expected.</para>
     </sect3>
 
     <sect3>
@@ -136,11 +165,6 @@
       problems with larger disks, make this the first physical partition on
       your first disk drive.  A partition size of 200 megabytes is
       adequate.</para></listitem>
-
-      <listitem><para>/boot/efi &ndash; The EFI System Partition, which is
-      needed for booting the system with UEFI.  Read
-      <ulink url="&blfs-book;postlfs/grub-setup.html">the BLFS page</ulink>
-      for details.</para></listitem>
 
       <listitem><para>/home &ndash; Highly recommended.  Share your home
       directory and user customization across multiple distributions or LFS
@@ -197,5 +221,69 @@
     linkend="ch-bootable-fstab"/>.</para>
 
     </sect3>
+  </sect2>
+
+  <sect2>
+  <title>An Example Disk Layout</title>
+
+  <para>Below is an example layout for an empty disk drive.</para>
+
+<screen>Number  Start (sector)    End (sector)        Size   Code  Name
+   1            2048           22527       10.0 MiB  EF00  EFI system partition
+   2           22528           24575     1024.0 KiB  EF02  BIOS boot partition
+   3           24576         1048575      500.0 MiB  8300  /boot
+   4         1048576         5242879        2.0 GiB  8200  swap
+   5         5242880        89128959       40.0 GiB  8300  lfs13.0+
+   6        89128960       173015039       40.0 GiB  8300  /home</screen>
+
+  <para>The above example makes a few assumptions:
+     <itemizedlist>
+       <listitem>
+         <para>The partition table is a GUID Partition Table (GPT).</para>
+       </listitem>
+
+       <listitem>
+         <para>Both EFI and BIOS Boot partitions are present, although
+         only one will be used. Which is used depends on the system BIOS.
+         If the system is old, it will not have UEFI capabilities at all.
+         Some later systems can disable UEFI through the BIOS by disabling
+         "Secure Boot" and enabling "Legacy Support" or "CSM" (Compatibility
+         Support Mode).  If you know in advance which mode you will use,
+         the other partition can be omitted.</para>
+       </listitem>
+
+       <listitem>
+         <para>The EFI partition must be formatted as VFAT.</para>
+       </listitem>
+
+       <listitem>
+         <para>The BIOS partition is not formatted.</para>
+       </listitem>
+       
+       <listitem>
+         <para>The swap partition must be formatted as swap.</para>
+       </listitem>
+       
+       <listitem>
+         <para>The /boot partition can be formatted as ext2 since
+         it is rarely written (and then only by root) and does
+         not need a journal.</para>
+       </listitem>
+       
+       <listitem>
+         <para>The recommendation for all other partitions is to use ext4 
+         formatting.</para>
+       </listitem>
+
+       <listitem>
+         <para>Another partition can be added for installing the "host"
+         system for building LFS. A minimal sized partition, 10 GiB, should be
+         sufficient. If you are building the system using a LiveCD, a host 
+         partition may not be required.</para>
+       </listitem>
+
+     </itemizedlist>
+
+  </para>
   </sect2>
 </sect1>
