@@ -1,3 +1,7 @@
+# DISCONTINUED
+
+Due to lack of interest in the project, SYSVinit Linux From Scratch has been discontinued. For a more up to date version hosted by the official Linux From Scratch team, see [the latest development snapshot on the SysV branch](https://linuxfromscratch.org/lfs/view/development/).
+
 # SYSVinit Linux From Scratch
 
 This book aims to be a community-maintained continuation effort of the SysVinit version of the Linux From Scratch book after [the recent announcement on support being dropped for SysVinit in the next version of the book](https://discord.com/channels/282675835964620800/282677788035514370/1467006939975254201). **WORK IN PROGRESS!**
